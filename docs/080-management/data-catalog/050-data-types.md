@@ -17,6 +17,26 @@ Each data type is associated with a specific storage type that defines how the d
 
 - **Untyped** – represents the storage of typable data in text format. If you don't want to query properties using numeric and date operators, then you can change the storage from **Typed** to **Untyped**.
 
+## Why data types matter
+
+Selecting the correct data type affects how values are processed, filtered, compared, and sorted throughout the platform.
+
+For example, when numeric values are stored as text, they are treated as strings and sorted lexically rather than numerically:
+
+```text
+1, 10, 11, 12, 2, 3, 4, 5
+```
+
+When the same values are stored using an appropriate numeric data type, they are sorted correctly:
+
+```text
+1, 2, 3, 4, 5, 10, 11, 12
+```
+
+The same principle applies to dates and other typed values. Choosing the correct data type enables CluedIn to interpret and process the data according to its intended meaning.
+
+As a best practice, select the data type that reflects the business meaning of the property rather than defaulting to text for all values.
+
 The following table provides the description of data types along with the type of storage that applies to each data type.
 
 | Data type | Description | Storage |
